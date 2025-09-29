@@ -28,22 +28,22 @@ cask "qodercli" do
   on_macos do
     on_intel do
       url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_amd64.zip"
-      sha256 "d47b852304e980926f2b617ee107928206d787e305d18433a0dd73fee23dc5db"
+      sha256 "53c54da56222668bfc0a75c2e382eece869b838b2b78306be5b629cb1250fa31"
     end
     on_arm do
       url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_arm64.zip"
-      sha256 "fe2037cd693300b32996b60790b23e51374f5782738b5d87f543da106a6ac3d3"
+      sha256 "49503002dcfad86f956a748236f5dabb2259d97f2e79f6f04395eed50cae46f6"
     end
   end
 
   on_linux do
     on_intel do
       url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_amd64.tar.gz"
-      sha256 "bc2ced59f9ca2f70fcf09ac3cee744c205a956f4c1f59c4ba5223c1ac1f0a167"
+      sha256 "fe3a02161b50cb4bff1875d0cde4023bbf9541084e3184cf513193e37477859a"
     end
     on_arm do
       url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_arm64.tar.gz"
-      sha256 "b509abb85fb4e97de2f04d6b2dfead1f5a49f952e65f38932ee6ee38c9f0954a"
+      sha256 "e573bd51d01e4505c45937d40c044b77e24fdb3a9fa44cc43f692c2140fa7ea4"
     end
   end
 
