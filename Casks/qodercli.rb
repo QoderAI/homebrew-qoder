@@ -65,10 +65,33 @@ cask "qodercli" do
     end
   end
 
+  version "0.1.39"
+
+  on_macos do
+    on_intel do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_amd64.zip"
+      sha256 "4cd826e1575e355bd3dea0687a71e410bccb0c7a8a64936ee02db2a482391cdc"
+    end
+    on_arm do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_arm64.zip"
+      sha256 "e6df38a1826830ad8e788343d7e32db3c1e1cb1d6bdf0349119075361fba5355"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_amd64.tar.gz"
+      sha256 "b9f8151749e08e66fd308c6e83e1f1220d308644e02c91c804491b3bce67137e"
+    end
+    on_arm do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_arm64.tar.gz"
+      sha256 "9e05cc6cfa46a1b9143b5423d2cb665a18abcae404877e8085003a431f75716e"
+    end
+  end
+
   name "qodercli"
   desc "Qoder AI CLI tool - Terminal-based AI assistant for code development"
   homepage "https://qoder.com"
-  version "0.1.38"
 
   livecheck do
     skip "Auto-generated on release."
@@ -76,27 +99,6 @@ cask "qodercli" do
 
   binary "qodercli"
 
-  on_macos do
-    on_intel do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_amd64.zip"
-      sha256 "03d644972aee033df6ebfc0635ea8763a64a6f3d80afd3e9901be46b5e590d6f"
-    end
-    on_arm do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_arm64.zip"
-      sha256 "2db451ce97e11eb27686ec52ad0328f9ea2a85fca46b3752e5774e7b43c8f0b6"
-    end
-  end
-
-  on_linux do
-    on_intel do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_amd64.tar.gz"
-      sha256 "58dfcfed6536763bafc83fff44629dc333d5b0a3c9bc9ad058823bedf714d036"
-    end
-    on_arm do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_arm64.tar.gz"
-      sha256 "2bd66c1458859cb7db9b17bb71ddf81efb9f3c4c3caf8930f038ac042af670ea"
-    end
-  end
-
   # No zap stanza required
+
 end
