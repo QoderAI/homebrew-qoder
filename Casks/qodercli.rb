@@ -65,33 +65,10 @@ cask "qodercli" do
     end
   end
 
-  version "0.1.43"
-
-  on_macos do
-    on_intel do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_amd64.zip"
-      sha256 "dd190dba36c4111f30803339bbfdfc29d7f500821b43ebaad5a1875bfdf3af93"
-    end
-    on_arm do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_arm64.zip"
-      sha256 "53cec443d35cbf51c5deefc9195d9cb0f42c9b15fc45d89b3265facc5dea94ea"
-    end
-  end
-
-  on_linux do
-    on_intel do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_amd64.tar.gz"
-      sha256 "920792ff689da7a3f4ecb5c228d1ec7c4aa8c7c5450c16302762c808f795c5bc"
-    end
-    on_arm do
-      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_arm64.tar.gz"
-      sha256 "de0d3c64bd47f7625487219e5de6402c7c8d8899d4d711a2cd8a1e3da910b1ef"
-    end
-  end
-
   name "qodercli"
   desc "Qoder AI CLI tool - Terminal-based AI assistant for code development"
   homepage "https://qoder.com"
+  version "0.1.44"
 
   livecheck do
     skip "Auto-generated on release."
@@ -99,6 +76,27 @@ cask "qodercli" do
 
   binary "qodercli"
 
-  # No zap stanza required
+  on_macos do
+    on_intel do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_amd64.zip"
+      sha256 "e35dba106ea5a9694318d3ad4bb8b5a8f8fe7066761f0127867376d9ee17a397"
+    end
+    on_arm do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_darwin_arm64.zip"
+      sha256 "195f6ad99b932788150d9cd7f3f3142102fd8ca5652b3bd1fb70707aec93d0d8"
+    end
+  end
 
+  on_linux do
+    on_intel do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_amd64.tar.gz"
+      sha256 "42dc7d5d7d45dbcb6d91c479182635803584aad69a88f9006e089ed5bba7c1e8"
+    end
+    on_arm do
+      url "https://download.qoder.com/qodercli/releases/#{version}/qodercli_#{version}_linux_arm64.tar.gz"
+      sha256 "b30a55abbd185ec7b66c088fef25fbd8b9abaec7d28878d88e0b7837eb873d7a"
+    end
+  end
+
+  # No zap stanza required
 end
