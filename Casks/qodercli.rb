@@ -1,25 +1,25 @@
 cask "qodercli" do
-  version "0.2.15"
+  version "0.2.16"
   desc "Terminal-based AI assistant for code development"
   homepage "https://qoder.com"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.15/qodercli-darwin-arm64.tar.gz"
-      sha256 "60c79023fe30f60e2a3127f1ae5fad796e46313e1ab3d7233b3e8739d0f3ca42"
+      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.16/qodercli-darwin-arm64.tar.gz"
+      sha256 "ea5d717bfcc03a440187f69cc2066e8136b7e8fe3f8fc380fdae538adbd82e6e"
     else
-      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.15/qodercli-darwin-x64.tar.gz"
-      sha256 "b26a3612a34149ca939ce59a219ba98aaa1df9eba28b40b557ae6a09c4c358d2"
+      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.16/qodercli-darwin-x64.tar.gz"
+      sha256 "27913005513bf52006ce9c9a827390bb37b68da149d527c2688f71f9923df310"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.15/qodercli-linux-arm64.tar.gz"
-      sha256 "e5cba044ad9fcfe757c67b57c0d1f022fb98eaa26de4fba18b94b0595b4fc30c"
+      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.16/qodercli-linux-arm64.tar.gz"
+      sha256 "59ae80a5d6ede8730dba214406a2a186119bc55d302b1509c258de35eb379056"
     else
-      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.15/qodercli-linux-x64.tar.gz"
-      sha256 "89c89c5ee5f0370c997c59a72acf9ebb58d5b02c9a698bb7cde58cf3185d482c"
+      url "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/0.2.16/qodercli-linux-x64.tar.gz"
+      sha256 "d9efa3b9e3ca5458120a06c94442e7f0fce8efed6c88d904e022cedcb6dceb67"
     end
   end
 
