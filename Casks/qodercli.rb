@@ -1,25 +1,25 @@
 cask "qodercli" do
-  version "1.1.43"
+  version "1.1.44"
   desc "Qoder AI CLI tool - Terminal-based AI assistant for code development"
   homepage "https://qoder.com"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://download.qoder.com/qodercli/releases/1.1.43/qodercli-darwin-arm64.tar.gz"
-      sha256 "676681fb9a1b1fe627c18ca1827b8b644dd8b06719a2f76cca4330bcb5a243f6"
+      url "https://download.qoder.com/qodercli/releases/1.1.44/qodercli-darwin-arm64.tar.gz"
+      sha256 "68c6b806a828a3ac0a8a9c07528696a508cbebb04fddd5d2fcf62351416171ed"
     else
-      url "https://download.qoder.com/qodercli/releases/1.1.43/qodercli-darwin-x64.tar.gz"
-      sha256 "a6a088e9de0b403265891607515ffed5736bc81349b60ff23244094fd1dab659"
+      url "https://download.qoder.com/qodercli/releases/1.1.44/qodercli-darwin-x64.tar.gz"
+      sha256 "60d072c0445f565cc93e8f90afdbba4bf7ce7a77fd5658dc0f6617a6b4d2abb4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://download.qoder.com/qodercli/releases/1.1.43/qodercli-linux-arm64.tar.gz"
-      sha256 "7eb068ecbc577e8b9d153e7db4eb997237134c67f79cd3bb837776e714eb9095"
+      url "https://download.qoder.com/qodercli/releases/1.1.44/qodercli-linux-arm64.tar.gz"
+      sha256 "bc22e518b7a9db0a67d683a00b3036a92c6ec2ac85988a93b038a96714661df3"
     else
-      url "https://download.qoder.com/qodercli/releases/1.1.43/qodercli-linux-x64.tar.gz"
-      sha256 "86fb0f3f3190cbda92a13a43dc8a97474741c9d9f4c8a2ed9e40b8767fec52ef"
+      url "https://download.qoder.com/qodercli/releases/1.1.44/qodercli-linux-x64.tar.gz"
+      sha256 "f4c097129a2541e3d00dd28db75040591b611251db56953b333d2ba14c1ea9d5"
     end
   end
 
