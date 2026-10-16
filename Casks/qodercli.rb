@@ -23,20 +23,13 @@ cask "qodercli" do
     end
   end
 
-  binary "qodercli"
-
-  postflight do
+  generated_script "qodercli-postflight.rb", content: <<~'RUBY'
+    #!/usr/bin/env ruby
     require 'fileutils'
     require 'time'
 
-    marker = staged_path/'.qodercli-install-resource'
-    File.write(marker, "homebrew-cask")
-    marker.chmod(0644)
-
-    (staged_path/"qodercli").chmod(0755)
-
-    bin_binary = HOMEBREW_PREFIX/"bin"/"qodercli"
-    ENV['QODER_CLI_INSTALL'] = '1'
+    prefix = ENV.fetch('QODER_HOMEBREW_PREFIX')
+    bin_binary = File.join(prefix, 'bin', 'qodercli')
 
     begin
       log_dir = File.expand_path("~/.qoder/logs")
@@ -49,7 +42,7 @@ cask "qodercli" do
       log.puts "Installation started at #{Time.now.iso8601}"
       log.puts "Installation method: homebrew-cask"
       log.puts "Platform: #{RUBY_PLATFORM}"
-      log.puts "Homebrew prefix: #{HOMEBREW_PREFIX}"
+      log.puts "Homebrew prefix: #{prefix}"
       log.puts "================================\n"
       log.flush
 
@@ -98,5 +91,15 @@ cask "qodercli" do
       puts "Get started: qodercli --help"
       puts "(Note: Installation log could not be created: #{e.message})\n"
     end
+  RUBY
+  binary "qodercli"
+
+  postflight_steps do
+    write_file ".qodercli-install-resource", "homebrew-cask"
+    set_permissions ".qodercli-install-resource", "0644"
+    set_permissions "qodercli", "0755"
+    run "qodercli-postflight.rb", base: :staged_path,
+                                env: { "QODER_CLI_INSTALL" => "1", "QODER_HOMEBREW_PREFIX" => "{{HOMEBREW_PREFIX}}" },
+                                print_stdout: true, writable_paths: ["."], writable_base: :home
   end
 end
