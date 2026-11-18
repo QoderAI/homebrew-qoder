@@ -25,7 +25,7 @@ cask "qodercli" do
 
   binary "qodercli"
 
-  postflight do
+  postflight_steps do
     require 'fileutils'
     require 'time'
 
